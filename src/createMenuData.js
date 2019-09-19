@@ -14,12 +14,21 @@ function children(data){
   })
 }
 
-function createMenuData(parent) {
-  let newArr = parent.map(function(parent){
-  subArr = parent.split("/")
-  return {title: subArr[0], data: [subArr[1]]}
+function dataInArrays(data){
+  return parents(data).map((parent) => 
+    [parent, children(data).filter(child => child.indexOf(parent) !== -1)])
+}
+  
+function createMenuData(data){
+  let arrays = dataInArrays(data)
+  arrays.unshift(["title", "data"])
+  let objectKeys = arrays.shift();
+  return arrays = arrays.map(function(row){
+    return objectKeys.reduce(function(object, key, index){
+        object[key] = row[index];
+        return object;
+    }, {});
   });
-  return newArr
 }
 
 module.exports = createMenuData;
