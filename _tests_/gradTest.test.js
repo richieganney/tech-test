@@ -1,10 +1,4 @@
-function createMenuData(parent) {
-  let newArr = parent.map(function(parent){
-  subArr = parent.split("/")
-  return {title: subArr[0], data: [subArr[1]]}
- });
- return newArr
-}
+const createMenuData = require('../src/createMenuData');
 
 describe("menu Data Generator", () => {
     it("creates correct data structure ", () => {
