@@ -5,13 +5,13 @@ function filteredData(data){
 function parents(data){
   return filteredData(data).map(function(word){
     return word.split("/")[0]
-  }).filter((v, i, a) => a.indexOf(v) === i)
+  }).filter((v, i, a) => a.indexOf(v) === i).sort()
 }
   
 function children(data){
   return filteredData(data).map(function(word){
     return word.split("/")[1]
-  })
+  }).sort()
 }
 
 function dataInArrays(data){
