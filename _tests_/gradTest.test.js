@@ -26,7 +26,7 @@ describe("menu Data Generator", () => {
       const actualResult = createMenuData(data);
       expect(actualResult).toMatchObject(expectedResult);
     });
-    
+
    // additional tests
     it("creates correct data structure ", () => {
       const data = ["parent1/parent1child"]
@@ -86,3 +86,4 @@ describe("menu Data Generator", () => {
       expect(actualResult).toMatchObject(expectedResult);
     });
   });
+  
