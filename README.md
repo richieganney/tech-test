@@ -1,24 +1,18 @@
-## Clone this repository
-please do not fork it!
+# README 
 
-## Setup
-install yarn or npm globally 
+## Project description
 
-run `yarn` or `npm install`
+Welcome to my version of createMenuData, a program that converts an array of strings into a JavaScript object.
 
-## Challenge
-Write some code to implement the function `createMenuData`
+## Solution
 
-Use the test runner `jest` to run the `gradTest.test.js` 
+I decided to define four additional functions, and have the original createMenuData calling on those functions. This followed SRP and allowed me to encapsulate the various data sets, making it easiliy changeable in case the data input/requirements change.
 
-Commit your changes and push them up to your own git repositry!
-Once done, link us the URL of your solution
+## Setting up and running tests
 
-## Tips
-
-The data set in the test ends at parent 4, but imagine any number of parents and children could be passed to this function.
-
-When the test passes clean up your code.
-It's worth spending time formatting and simplifing things.
-It's more important that humans can read your code than computers.
-Software tools like `eslint` do some amazing things 🕶
+First, clone this repository. Then:
+```console
+cd tech-test
+npm install
+jest
+```
